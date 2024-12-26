@@ -1,0 +1,326 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  h1, h2, h3, h4, h5 {
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 15px;
+  }
+  
+  p {
+    margin-bottom: 15px;
+  }
+  
+  section {
+    padding: 50px 0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Animation Styles */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .fade-in-up {
+    opacity: 0;
+    animation: fadeInUp 1s forwards;
+  }
+  
+  .fade-in-up-delayed {
+    opacity: 0;
+    animation: fadeInUp 1s 0.5s forwards; /* delayed */
+  }
+  
+  /* Header Styles */
+  header {
+    background-color: #6A00FF;
+    padding: 20px;
+    text-align: center;
+    animation: fadeInUp 1s forwards;
+  }
+  
+  header h1 {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  
+  .header-btn {
+    background-color: #FF4D4D;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 15px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .header-btn:hover {
+    background-color: #e63d3d;
+  }
+  
+  /* Invoice Form Styles - Centering */
+  .invoice-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 30px auto;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s forwards;
+  }
+  
+  .form-group {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input, 
+  .form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .add-item {
+    text-align: right;
+    margin-top: 15px;
+  }
+  
+  .add-item button {
+    background-color: #6A00FF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .add-item button:hover {
+    background-color: #5500cc;
+  }
+  
+  /* Item Table */
+  .invoice-items {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    animation: fadeInUp 1.2s forwards;
+  }
+  
+  .invoice-items th, 
+  .invoice-items td {
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  .invoice-items th {
+    background-color: #f8f8f8;
+    font-weight: bold;
+  }
+  
+  .total-section {
+    text-align: right;
+    margin-top: 20px;
+  }
+  
+  .total-section h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .total-section p {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  /* Features Section */
+  .features-section {
+    background-color: #2C2C2C;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .features-section h2 {
+    font-size: 28px;
+    margin-bottom: 40px;
+    color: white;
+    animation: fadeInUp 1s forwards;
+  }
+  
+  .feature-box {
+    background-color: #383838;
+    padding: 20px;
+    width: 23%;
+    min-width: 250px;
+    border-radius: 8px;
+    animation: fadeInUp 1.2s forwards;
+  }
+  
+  .feature-box h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  
+  .feature-box p {
+    font-size: 14px;
+  }
+  
+  /* Pricing Section */
+  .pricing-section {
+    background-color: #f8f8f8;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+  }
+  
+  .pricing-section h2 {
+    font-size: 28px;
+    margin-bottom: 40px;
+    color: #333;
+    animation: fadeInUp 1s forwards;
+  }
+  
+  .pricing-plans {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    animation: fadeInUp 1.2s forwards;
+  }
+  
+  .pricing-plan {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    width: 30%;
+    min-width: 250px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .pricing-plan:hover {
+    transform: translateY(-10px);
+  }
+  
+  .pricing-plan h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  
+  .pricing-plan p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .pricing-plan button {
+    background-color: #6A00FF;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .pricing-plan button:hover {
+    background-color: #5500cc;
+  }
+  
+  /* FAQ Section */
+  .faq-section {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 50px 0;
+  }
+  
+  .faq-section h2 {
+    font-size: 28px;
+    margin-bottom: 40px;
+    color: #333;
+    animation: fadeInUp 1s forwards;
+  }
+  
+  .faq-question {
+    margin-bottom: 20px;
+    text-align: left;
+    animation: fadeInUp 1.2s forwards;
+  }
+  
+  .faq-question h4 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .faq-question p {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    margin-top: 50px;
+  }
+  
+  .footer p {
+    margin: 0;
+  }
+  

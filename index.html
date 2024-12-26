@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invoice Generator</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Invoice Generator - Free Online Invoice Maker</h1>
+    <button class="create-invoice-btn">Create Your First Invoice</button>
+  </header>
+
+  <section class="invoice-form">
+    <form id="invoice-form">
+      <h2>Free Invoice Generator</h2>
+
+      <div class="form-group">
+        <label for="invoice-number">Invoice No.</label>
+        <input type="text" id="invoice-number" placeholder="A0001">
+      </div>
+
+      <div class="form-group">
+        <label for="invoice-date">Invoice Date</label>
+        <input type="date" id="invoice-date" value="2024-12-26">
+      </div>
+
+      <div class="form-section">
+        <h3>Billed By (Your Details)</h3>
+        <input type="text" id="your-business-name" placeholder="Your Business Name">
+        <input type="text" id="your-address" placeholder="Your Address">
+      </div>
+
+      <div class="form-section">
+        <h3>Billed To (Client's Details)</h3>
+        <input type="text" id="client-business-name" placeholder="Client's Business Name">
+        <input type="text" id="client-address" placeholder="Client's Address">
+      </div>
+
+      <div class="form-section">
+        <h3>Items</h3>
+        <div id="items">
+          <div class="item">
+            <input type="text" placeholder="Item Name">
+            <input type="number" placeholder="Quantity" class="quantity">
+            <input type="number" placeholder="Rate" class="rate">
+            <input type="number" placeholder="Amount" class="amount" readonly>
+          </div>
+        </div>
+        <button id="add-item-btn" type="button">Add Item</button>
+      </div>
+
+      <div class="total-section">
+        <h3>Total: <span id="total-amount">0.00</span></h3>
+      </div>
+
+      <button id="generate-pdf-btn" type="button">Generate PDF</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>Powered by Your Company</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
